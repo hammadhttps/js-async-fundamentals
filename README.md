@@ -133,28 +133,28 @@ fetchUser(userId, (user) => {
 });
 ```
 
-### Event Loop Impact
+### **Event Loop Impact**
 - Each async callback goes to appropriate queue
 - Callback Hell creates complex queue management
 - Error handling becomes difficult across nested levels
 
 ---
 
-## 🤝 Promises
+## 🤝 **Promises**
 
 A cleaner way to handle asynchronous operations with better error handling and chaining.
 
-### Promise States
+### **Promise States**
 1. **Pending** - Initial state, neither fulfilled nor rejected
 2. **Fulfilled** - Operation completed successfully
 3. **Rejected** - Operation failed
 
-### Key Features
+### **Key Features**
 - **Chainable** - `.then()` and `.catch()` return new promises
 - **Error handling** - Centralized error management
 - **Static methods** - `Promise.all()`, `Promise.race()`, `Promise.allSettled()`
 
-### Event Loop Integration
+### **Event Loop Integration**
 ```javascript
 console.log("1️⃣ Start");
 Promise.resolve().then(() => console.log("🤝 Promise"));
@@ -165,26 +165,26 @@ console.log("2️⃣ End");
 // Event Loop Priority: Microtask Queue > Task Queue
 ```
 
-### Promise vs setTimeout Priority
+### **Promise vs setTimeout Priority**
 - **Promises** go to Microtask Queue (higher priority)
 - **setTimeout** goes to Task Queue (lower priority)
 - Event Loop processes Microtasks before Tasks
 
 ---
 
-## ⏳ Async/Await
+## ⏳ **Async/Await**
 
 Syntactic sugar over promises, making asynchronous code look synchronous.
 
-### Key Concepts
+### **Key Concepts**
 - **async functions** always return promises
 - **await** pauses execution until promise settles
 - **try/catch** provides clean error handling
 - **Sequential vs Concurrent** execution patterns
 
-### Execution Patterns
+### **Execution Patterns**
 
-#### Sequential Execution
+#### **Sequential Execution**
 ```javascript
 async function sequential() {
     const result1 = await apiCall1(); // Waits 2s
@@ -193,7 +193,7 @@ async function sequential() {
 }
 ```
 
-#### Concurrent Execution
+#### **Concurrent Execution**
 ```javascript
 async function concurrent() {
     const [result1, result2] = await Promise.all([
@@ -204,18 +204,18 @@ async function concurrent() {
 }
 ```
 
-### Event Loop Behavior
+### **Event Loop Behavior**
 - **await** creates microtasks
 - Async functions don't block the main thread
 - Event Loop continues processing other tasks during await
 
 ---
 
-## 🔄 The Event Loop
+## 🔄 **The Event Loop**
 
 The heart of JavaScript's asynchronous behavior, managing the single-threaded execution model.
 
-### JavaScript Runtime Environment
+### **JavaScript Runtime Environment**
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
@@ -243,7 +243,7 @@ The heart of JavaScript's asynchronous behavior, managing the single-threaded ex
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Event Loop Algorithm
+### **Event Loop Algorithm**
 
 ```
 while (true) {
@@ -261,7 +261,7 @@ while (true) {
 }
 ```
 
-### Execution Priority
+### **Execution Priority**
 
 1. **Synchronous Code** (Call Stack)
 2. **Microtask Queue** (Promises, async/await)
@@ -269,7 +269,7 @@ while (true) {
 
 
 ```
-### Real-Time Event Loop Demo
+### **Real-Time Event Loop Demo**
 
 ```javascript
 // Interactive demonstration
@@ -298,7 +298,7 @@ console.log("📊 Phase 1: Synchronous code ends");
 
 ```
 
-### Key Takeaways
+### **Key Takeaways**
 
 - **Single-threaded**: JavaScript can only do one thing at a time
 - **Non-blocking**: Async operations don't freeze the application
@@ -310,7 +310,7 @@ console.log("📊 Phase 1: Synchronous code ends");
 
 ```
 
-## 📚 Additional Resources
+## 📚 **Additional Resources**
 
 - [MDN - Asynchronous JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous)
 - [JavaScript.info - Promises](https://javascript.info/promise-basics)
