@@ -306,7 +306,9 @@ console.log("📊 Phase 1: Synchronous code ends");
 - **Queue-based**: Tasks wait in queues until Call Stack is empty
 - **Priority system**: Microtasks have higher priority than tasks
 
----
+```
+
+```
 
 ## 📚 Additional Resources
 
@@ -315,5 +317,7 @@ console.log("📊 Phase 1: Synchronous code ends");
 - [Philip Roberts - Event Loop Talk](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 - [JavaScript Event Loop Visualizer](https://www.jsv9000.app/)
 
----
+```
+
+```
 
