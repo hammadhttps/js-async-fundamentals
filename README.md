@@ -298,7 +298,7 @@ console.log("📊 Phase 1: Synchronous code ends");
 
 ```
 
-### **Key Takeaways**
+### **🎯 Key Takeaways**
 
 - **Single-threaded**: JavaScript can only do one thing at a time
 - **Non-blocking**: Async operations don't freeze the application
@@ -306,9 +306,7 @@ console.log("📊 Phase 1: Synchronous code ends");
 - **Queue-based**: Tasks wait in queues until Call Stack is empty
 - **Priority system**: Microtasks have higher priority than tasks
 
-```
-
-```
+---
 
 ## 📚 **Additional Resources**
 
