@@ -1,8 +1,8 @@
-# 🚀 Asynchronous JavaScript: A Complete Guide
+# 🚀 **Asynchronous JavaScript: A Complete Guide**
 
 > **Master the fundamentals of async programming in JavaScript** - Essential knowledge for building responsive web applications.
 
-## 📋 Table of Contents
+## 📋 **Table of Contents**
 
 - [🎯 Overview](#-overview)
 - [⚡ JavaScript's Fundamental Nature](#-javascripts-fundamental-nature)
@@ -16,27 +16,27 @@
 
 ---
 
-## 🎯 Overview
+## 🎯 **Overview**
 
 Asynchronous JavaScript enables non-blocking operations, allowing applications to remain responsive while performing time-consuming tasks like network requests, file operations, or database queries.
 
-### Key Benefits
+### **Key Benefits**
 - **Non-blocking**: UI stays responsive during async operations
 - **Concurrent execution**: Multiple operations can run simultaneously
 - **Better user experience**: No frozen interfaces during data loading
 
 ---
 
-## ⚡ JavaScript's Fundamental Nature
+## ⚡ **JavaScript's Fundamental Nature**
 
 JavaScript is inherently **synchronous**, **blocking**, and **single-threaded**:
 
-### Core Characteristics
+### **Core Characteristics**
 - **Synchronous**: Code executes line by line, one at a time
 - **Blocking**: Long operations freeze the entire application
 - **Single-threaded**: Only one operation can run at any moment
 
-### The Problem
+### **The Problem**
 ```javascript
 // This blocks everything for 5 seconds
 function fetchData() {
@@ -48,7 +48,7 @@ function fetchData() {
 }
 ```
 
-### Event Loop Impact
+### **Event Loop Impact**
 When synchronous operations block the main thread:
 - ⏰ Timers are delayed
 - 🖱️ User interactions are ignored
@@ -57,26 +57,26 @@ When synchronous operations block the main thread:
 
 ---
 
-## 🔄 Achieving Asynchronous Behavior
+## 🔄 **Achieving Asynchronous Behavior**
 
 JavaScript relies on **Web APIs** (browser) or **Node.js APIs** to achieve asynchronicity.
 
-### Web APIs Provide Asynchronicity
+### **Web APIs Provide Asynchronicity**
 - `setTimeout` / `setInterval` - Timer-based operations
 - `fetch` - Network requests
 - DOM Events - User interactions
 - File API - File operations
 
-### Event Loop Integration
+### **Event Loop Integration**
 ```
 Synchronous Code → Web API → Background Processing → Callback Queue → Event Loop → Call Stack
 ```
 
 ---
 
-## ⏰ Timeouts and Intervals
+## ⏰ **Timeouts and Intervals**
 
-### setTimeout()
+### **setTimeout()**
 Executes a function once after a specified delay.
 
 **Event Loop Behavior:**
@@ -86,7 +86,7 @@ Executes a function once after a specified delay.
 4. When timer expires, callback goes to Task Queue
 5. Event Loop moves callback to Call Stack when empty
 
-### setInterval()
+### **setInterval()**
 Repeatedly executes a function at specified intervals.
 
 **Important Notes:**
@@ -94,7 +94,7 @@ Repeatedly executes a function at specified intervals.
 - ✅ **Recursive setTimeout preferred** - Guarantees timing between executions
 - ❌ **setInterval can overlap** - If execution takes longer than interval
 
-### Event Loop Demonstration
+### **Event Loop Demonstration**
 ```javascript
 console.log("1️⃣ Start");
 setTimeout(() => console.log("⏰ Timer"), 0);
@@ -106,23 +106,23 @@ console.log("2️⃣ End");
 
 ---
 
-## 📞 Callbacks
+## 📞 **Callbacks**
 
 Functions passed as arguments to other functions, executed when a specific event occurs.
 
-### Types of Callbacks
+### **Types of Callbacks**
 
-#### Synchronous Callbacks
+#### **Synchronous Callbacks**
 - Execute immediately when called
 - Examples: Array methods (`map`, `filter`, `reduce`)
 - No Event Loop involvement
 
-#### Asynchronous Callbacks
+#### **Asynchronous Callbacks**
 - Execute after a delay or event
 - Examples: `setTimeout`, event handlers, API calls
 - Managed by Event Loop
 
-### Callback Hell Problem
+### **Callback Hell Problem**
 ```javascript
 fetchUser(userId, (user) => {
     fetchPosts(user.id, (posts) => {
