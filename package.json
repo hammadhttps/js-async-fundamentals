@@ -1,0 +1,30 @@
+{
+  "name": "js-async-fundamentals",
+  "version": "1.0.0",
+  "description": "Comprehensive examples demonstrating asynchronous JavaScript concepts",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test",
+    "01-sync": "node 01-synchronous-vs-asynchronous.js",
+    "02-timeouts": "node 02-timeouts-and-intervals.js",
+    "03-callbacks": "node 03-callbacks.js",
+    "04-promises": "node 04-promises.js",
+    "05-async": "node 05-async-await.js",
+    "06-eventloop": "node 06-event-loop.js",
+    "all": "npm run 01-sync && npm run 02-timeouts && npm run 03-callbacks && npm run 04-promises && npm run 05-async && npm run 06-eventloop"
+  },
+  "keywords": [
+    "javascript",
+    "async",
+    "promises",
+    "callbacks",
+    "event-loop",
+    "interview",
+    "examples"
+  ],
+  "author": "Hammad",
+  "license": "MIT",   
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 
